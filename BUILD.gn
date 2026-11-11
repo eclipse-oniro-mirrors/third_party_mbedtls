@@ -85,8 +85,13 @@ if (defined(ohos_lite)) {
     MBEDTLS_SOURCES += MBEDTLS_FEATURE_SOURCES
   }
 
+  config("mbedtls_private_config") {
+    include_dirs = MBEDTSL_PRIVATE_INCLUDE_DIRS
+  }
+
   lite_library("mbedtls_shared") {
     target_type = "shared_library"
+    configs = [ ":mbedtls_private_config" ]
     public_configs = [ ":mbedtls_config" ]
     output_name = MBEDTLS_LIB_NAME
     sources = MBEDTLS_SOURCES
@@ -100,6 +105,7 @@ if (defined(ohos_lite)) {
       ]
     }
     target_type = "static_library"
+    configs = [ ":mbedtls_private_config" ]
     public_configs = [ ":mbedtls_config" ]
     output_name = MBEDTLS_LIB_NAME
     sources = MBEDTLS_SOURCES
@@ -147,6 +153,7 @@ if (defined(ohos_lite)) {
 
     static_library("mbedtls_gt") {
       sources = MBEDTLS_SOURCES
+      configs = [ ":mbedtls_private_config" ]
       output_name = "mbedtls_gt"
       public_configs = [ ":mbedtls_profile_test" ]
     }
@@ -172,6 +179,17 @@ if (defined(ohos_lite)) {
     MBEDTLS_SOURCES += MBEDTLS_FEATURE_SOURCES
   }
 
+  config("mbedtls_private_config") {
+    include_dirs = MBEDTLS_PRIVATE_INCLUED_DIRS
+  }
+
+  config("mbdetls_no_unwind_tables") {
+    cflags = [
+      "-fno-asynchronous-unwind-tables",
+      "-fno-unwind-tables",
+    ]
+  }
+
   ohos_shared_library("mbedtls_shared") {
     sanitize = {
       cfi = true
@@ -187,6 +205,10 @@ if (defined(ohos_lite)) {
     }
 
     branch_protector_ret = "pac_ret"
+    configs = [
+      ":mbedtls_private_config",
+      ":mbdetls_no_unwind_tables",
+    ]
     public_configs = [ ":mbedtls_config" ]
     output_name = MBEDTLS_LIB_NAME
     subsystem_name = "thirdparty"
