@@ -180,7 +180,7 @@ if (defined(ohos_lite)) {
   }
 
   config("mbedtls_private_config") {
-    include_dirs = MBEDTLS_PRIVATE_INCLUED_DIRS
+    include_dirs = MBEDTLS_PRIVATE_INCLUDE_DIRS
   }
 
   config("mbdetls_no_unwind_tables") {
