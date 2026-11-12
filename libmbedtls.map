@@ -53,7 +53,7 @@
     mbedtls_asn1_write_mpi;
     mbedtls_asn1_write_named_bitstring;
     mbedtls_asn1_write_null;
-    mbedtls_asn1_write_octet_stringl
+    mbedtls_asn1_write_octet_stringl;
     mbedtls_asn1_write_oid;
     mbedtls_asn1_write_printable_string;
     mbedtls_asn1_write_raw_buffer;
