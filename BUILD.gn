@@ -86,7 +86,7 @@ if (defined(ohos_lite)) {
   }
 
   config("mbedtls_private_config") {
-    include_dirs = MBEDTSL_PRIVATE_INCLUDE_DIRS
+    include_dirs = MBEDTLS_PRIVATE_INCLUDE_DIRS
   }
 
   lite_library("mbedtls_shared") {
