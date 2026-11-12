@@ -39,7 +39,7 @@
     mbedtls_asn1_get_mpi;
     mbedtls_asn1_get_sequence_of;
     mbedtls_asn1_get_tag;
-    mbedtls_asn1_srquence_free;
+    mbedtls_asn1_sequence_free;
     mbedtls_asn1_store_named_data;
     mbedtls_asn1_traverse_sequence_of;
     mbedtls_asn1_write_algorithm_identifier;
@@ -53,13 +53,13 @@
     mbedtls_asn1_write_mpi;
     mbedtls_asn1_write_named_bitstring;
     mbedtls_asn1_write_null;
-    mbedtls_asn1_write_octet_stringl;
+    mbedtls_asn1_write_octet_string;
     mbedtls_asn1_write_oid;
     mbedtls_asn1_write_printable_string;
     mbedtls_asn1_write_raw_buffer;
     mbedtls_asn1_write_tag;
     mbedtls_asn1_write_tagged_string;
-    mbedtls_asn1_wrire_utf8_string;
+    mbedtls_asn1_write_utf8_string;
     mbedtls_base64_decode;
     mbedtls_base64_encode;
     mbedtls_calloc;
@@ -87,7 +87,7 @@
     mbedtls_cipher_cmac_starts;
     mbedtls_cipher_cmac_update;
     mbedtls_cipher_crypt;
-    mbedtls_cipher_finsh;
+    mbedtls_cipher_finish;
     mbedtls_cipher_finish_padded;
     mbedtls_cipher_free;
     mbedtls_cipher_info_from_psa;
@@ -121,16 +121,16 @@
     mbedtls_ecc_group_from_psa;
     mbedtls_ecc_group_to_psa;
     mbedtls_ecdh_calc_secret;
-    mbedtls_ecdh_cam_do;
+    mbedtls_ecdh_can_do;
     mbedtls_ecdh_compute_shared;
-    mbedtls_ecdh_enable_resart;
+    mbedtls_ecdh_enable_restart;
     mbedtls_ecdh_free;
-    mbedtls_ecdh_gene_public;
+    mbedtls_ecdh_gen_public;
     mbedtls_ecdh_get_grp_id;
     mbedtls_ecdh_get_params;
     mbedtls_ecdh_init;
     mbedtls_ecdh_make_params;
-    mbedtls_ecdh_make_pubilc;
+    mbedtls_ecdh_make_public;
     mbedtls_ecdh_read_params;
     mbedtls_ecdh_read_public;
     mbedtls_ecdh_setup;
@@ -152,7 +152,7 @@
     mbedtls_ecdsa_write_signature;
     mbedtls_ecdsa_write_signature_restartable;
     mbedtls_ecjpake_check;
-    mbedtls_ecjpake_derive_seccret;
+    mbedtls_ecjpake_derive_secret;
     mbedtls_ecjpake_free;
     mbedtls_ecjpake_init;
     mbedtls_ecjpake_read_round_one;
@@ -164,7 +164,7 @@
     mbedtls_ecjpake_write_shared_key;
     mbedtls_eckey_info;
     mbedtls_ecp_check_budget;
-    mbedtls_ecp_check_privckey;
+    mbedtls_ecp_check_privkey;
     mbedtls_ecp_check_pub_priv;
     mbedtls_ecp_check_pubkey;
     mbedtls_ecp_copy;
@@ -213,7 +213,7 @@
     mbedtls_ecp_write_key;
     mbedtls_ecp_write_key_ext;
     mbedtls_ecp_write_public_key;
-     mbedtls_entropy_add_source;
+    mbedtls_entropy_add_source;
     mbedtls_entropy_free;
     mbedtls_entropy_func;
     mbedtls_entropy_gather;
@@ -626,5 +626,5 @@
     mbedtls_x509_time_is_future;
     mbedtls_x509_time_is_past;
   local:
-      *;
+    *;
 };
