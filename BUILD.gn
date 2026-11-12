@@ -153,6 +153,7 @@ if (defined(ohos_lite)) {
 
     static_library("mbedtls_gt") {
       sources = MBEDTLS_SOURCES
+      configs = []
       configs = [ ":mbedtls_private_config" ]
       output_name = "mbedtls_gt"
       public_configs = [ ":mbedtls_profile_test" ]
