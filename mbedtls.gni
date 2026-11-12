@@ -134,12 +134,9 @@ MBEDTLS_SOURCES = LIBRARYFILES
 
 MBEDTLS_INLCUDE_DIRS = [
   "$MBEDTLSDIR/include",
+  "$MBEDTLSDIR/library",
   "$MBEDTLSDIR/include/mbedtls",
   "$MBEDTLSDIR/include/psa",
-]
-
-MBEDTLS_PRIVATE_INCLUDE_DIRS = [
-  "$MBEDTLSDIR/library",
   "$MBEDTLSDIR/tests/include",
 ]
 
