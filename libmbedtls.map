@@ -29,7 +29,7 @@
     mbedtls_asn1_free_named_data_list;
     mbedtls_asn1_free_named_data_list_shallow;
     mbedtls_asn1_get_alg;
-    mbedtls_asn1_get_alg_null'
+    mbedtls_asn1_get_alg_null;
     mbedtls_asn1_get_bitstring;
     mbedtls_asn1_get_bitstring_null;
     mbedtls_asn1_get_bool;
