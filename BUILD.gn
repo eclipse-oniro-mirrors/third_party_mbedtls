@@ -172,6 +172,13 @@ if (defined(ohos_lite)) {
     MBEDTLS_SOURCES += MBEDTLS_FEATURE_SOURCES
   }
 
+  config("mbedtls_no_unwind_tables") {
+    cflags = [
+      "-fno-asynchronous-unwind-tables",
+      "-fno-unwind-tables",
+    ]
+  }
+
   ohos_shared_library("mbedtls_shared") {
     sanitize = {
       cfi = true
@@ -187,6 +194,9 @@ if (defined(ohos_lite)) {
     }
 
     branch_protector_ret = "pac_ret"
+    configs = [
+      ":mbedtls_no_unwind_tables",
+    ]
     public_configs = [ ":mbedtls_config" ]
     output_name = MBEDTLS_LIB_NAME
     subsystem_name = "thirdparty"

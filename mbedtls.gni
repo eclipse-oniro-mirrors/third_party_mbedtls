@@ -136,6 +136,7 @@ MBEDTLS_INLCUDE_DIRS = [
   "$MBEDTLSDIR/include",
   "$MBEDTLSDIR/library",
   "$MBEDTLSDIR/include/mbedtls",
+  "$MBEDTLSDIR/include/psa",
   "$MBEDTLSDIR/tests/include",
 ]
 
